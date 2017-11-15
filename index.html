@@ -14,7 +14,8 @@
 
 <script type="text/javascript">
   VK.init(function() {
-    alert('hello_world')
+  VK.callMethod("showGroupSettingsBox", 65);
+  VK.callMethod('showAppWidgetPreviewBox', 'table', table);
   }, function() {
      // API initialization failed
      // Can reload page here
@@ -57,14 +58,14 @@ var table = 'return {
               {"text": "v0.3.2"}
             ]
         ]
-    }'  
+    }';/*  
 document.getElementById('add-w')
   .addEventListener('mousedown', app.showWidget)
 app.showWidget = function(){
   VK.callMethod("showGroupSettingsBox", 65);
   VK.callMethod('showAppWidgetPreviewBox', 'table', table);
 
-}  
+}  */
 VK.addCallback('onAppWidgetPreviewSuccess', function f(location){
             alert("Виджет установлен");
         });  
