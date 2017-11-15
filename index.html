@@ -15,10 +15,7 @@
 <script type="text/javascript">
   VK.init(function() {
   VK.callMethod("showGroupSettingsBox", 65);
-VK.callMethod('showAppWidgetPreviewBox', 'text', 'return {
-    "title": "Цитата",
-    "text": "Текст цитаты"
-};');
+
     
   }, function() {
      // API initialization failed
@@ -26,8 +23,11 @@ VK.callMethod('showAppWidgetPreviewBox', 'text', 'return {
 }, '5.69');
 </script>
 <script type="text/javascript">
-VK.addCallbak('onSettingsChanged', function(){
-    alert('Настройки изменены');
+VK.addCallback('onSettingsChanged', function(){
+  VK.callMethod('showAppWidgetPreviewBox', 'text', 'return {
+    "title": "Цитата",
+    "text": "Текст цитаты"
+};');
 });
 
 VK.addCallback('onAppWidgetPreviewSuccess', function (){
