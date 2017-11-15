@@ -14,12 +14,44 @@
 
 <script type="text/javascript">
   var data = {
-        title: 'ТЕстирую виджет',
-        text: 'текст виджета'
-  };
+        "title": "Проекты",
+
+        "head": [
+        {
+            "text": "Наименование"
+        }, 
+        {
+            "text": "Описание",
+            "align": "center"
+        },
+        {
+          "text": "Версия"
+        }
+        ],
+        "body": [
+            [
+              {"text": "vnjson-js"},
+              {"text": "vnjson-cli"},
+              {"text": "vnjson-sdk"},
+              {"text": "vnjson-tgtq"}
+            ],
+            [
+              {"text": "Библиотека выполняющая ВН в браузере"},
+              {"text": "Консольная программа, на базе nodejs"},
+              {"text": "GUI обертка вокруг CLI версии"},
+              {"text": "Создание текстовых квестов для телеграмма"}
+            ],
+            [
+              {"text": "v0.8.5"},
+              {"text": "v0.4.7"},
+              {"text": "v0.7.0"},
+              {"text": "v0.3.2"}
+            ]
+        ]
+    };
   VK.init(function() {
 //  VK.callMethod("showGroupSettingsBox", 65);
-VK.callMethod("showAppWidgetPreviewBox", 'text', 'return ' + JSON.stringify(data) + ';') 
+VK.callMethod("showAppWidgetPreviewBox", 'tabl', 'return ' + JSON.stringify(data) + ';') 
     
   }, function() {
      // API initialization failed
