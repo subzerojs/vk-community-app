@@ -22,13 +22,46 @@
 </script>
 <script type="text/javascript">
 var app = {};
-  
+var table = 'return {
+        "title": "Проекты",
+
+        "head": [
+        {
+            "text": "Наименование"
+        }, 
+        {
+            "text": "Описание",
+            "align": "center"
+        },
+        {
+          "text": "Версия"
+        }
+        ],
+        "body": [
+            [
+              {"text": "vnjson-js"},
+              {"text": "vnjson-cli"},
+              {"text": "vnjson-sdk"},
+              {"text": "vnjson-tgtq"}
+            ],
+            [
+              {"text": "Библиотека выполняющая ВН в браузере"},
+              {"text": "Консольная программа, на базе nodejs"},
+              {"text": "GUI обертка вокруг CLI версии"},
+              {"text": "Создание текстовых квестов для телеграмма"}
+            ],
+            [
+              {"text": "v0.8.5"},
+              {"text": "v0.4.7"},
+              {"text": "v0.7.0"},
+              {"text": "v0.3.2"}
+            ]
+        ]
+    }'  
   
 app.showWidget = function(){
-  VK.callMethod('showAppWidgetPreviewBox', 'text', 'return {
-    "title": "Цитата",
-    "text": "Текст цитаты"
-};');
+  
+  VK.callMethod('showAppWidgetPreviewBox', 'table', table);
 
 }  
 VK.addCallback('onAppWidgetPreviewSuccess', function f(location){
