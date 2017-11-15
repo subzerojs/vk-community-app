@@ -13,6 +13,7 @@
   <button id="add-w">Подключить виджет</button>
 
 <script type="text/javascript">
+  
   var data = {
         "title": "Проекты",
 
@@ -50,8 +51,9 @@
         ]
     };
   VK.init(function() {
-//  VK.callMethod("showGroupSettingsBox", 65);
-VK.callMethod("showAppWidgetPreviewBox", 'tabl', 'return ' + JSON.stringify(data) + ';') 
+    
+//  VK.callMethod("appWidgets.update", 'table', 'return ' + JSON.stringify(data) + ';');
+VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';') 
     
   }, function() {
      // API initialization failed
