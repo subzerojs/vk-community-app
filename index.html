@@ -10,11 +10,11 @@
   <section>
   тест
   </section>
-
+  <button id="add-w">Подключить виджет</button>
 
 <script type="text/javascript">
   VK.init(function() {
-     app.showWidget();
+    alert('hello_world')
   }, function() {
      // API initialization failed
      // Can reload page here
@@ -58,9 +58,10 @@ var table = 'return {
             ]
         ]
     }'  
-  
+document.getElementById('add-w')
+  .addEventListener('mousedown', app.showWidget)
 app.showWidget = function(){
-  
+  VK.callMethod("showGroupSettingsBox", 4096);
   VK.callMethod('showAppWidgetPreviewBox', 'table', table);
 
 }  
