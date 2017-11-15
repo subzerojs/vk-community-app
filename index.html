@@ -52,8 +52,8 @@
     };
   VK.init(function() {
     
-//  VK.callMethod("appWidgets.update", 'table', 'return ' + JSON.stringify(data) + ';');
-VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';') 
+  VK.callMethod("appWidgets.update", 'table', 'return ' + JSON.stringify(data) + ';');
+//VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';') 
     
   }, function() {
      // API initialization failed
