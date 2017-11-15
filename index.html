@@ -15,7 +15,10 @@
 <script type="text/javascript">
   VK.init(function() {
   VK.callMethod("showGroupSettingsBox", 65);
-
+  VK.callMethod('showAppWidgetPreviewBox', 'text', 'return {
+    "title": "Цитата",
+    "text": "Текст цитаты"
+};');
     
   }, function() {
      // API initialization failed
@@ -24,10 +27,7 @@
 </script>
 <script type="text/javascript">
 VK.addCallback('onSettingsChanged', function(){
-  VK.callMethod('showAppWidgetPreviewBox', 'text', 'return {
-    "title": "Цитата",
-    "text": "Текст цитаты"
-};');
+
 });
 
 VK.addCallback('onAppWidgetPreviewSuccess', function (){
