@@ -13,27 +13,28 @@
   <button id="add-w">Подключить виджет</button>
 
 <script type="text/javascript">
+  var data = {
+        title: "ТЕстирую виджет',
+        text: 'текст виджета'
+  }
   VK.init(function() {
-  VK.callMethod("showGroupSettingsBox", 65);
-  VK.callMethod('showAppWidgetPreviewBox', 'text', 'return {
-    "title": "Цитата",
-    "text": "Текст цитаты"
-};');
+//  VK.callMethod("showGroupSettingsBox", 65);
+VK.callMethod("showAppWidgetPreviewBox", 'text', 'return ' + JSON.stringify(data) + ';') 
     
   }, function() {
      // API initialization failed
      // Can reload page here
 }, '5.69');
 </script>
-<script type="text/javascript">
+<script type="text/javascript">/*
 VK.addCallback('onSettingsChanged', function(){
 
 });
-
+/*
 VK.addCallback('onAppWidgetPreviewSuccess', function (){
             alert("Виджет установлен");
         });  
-  
+  */
 </script>  
   
 </body>
