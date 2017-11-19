@@ -18,26 +18,26 @@
             [
               {"text": "vnjson.js", "url": "https://github.com/vnjson/vnjson.js"},
               {"text": "Библиотека ВН в браузере"},
-              {"text": "v0.9.0"},
+              {"text": "v0.9.0"}
              /* {"text": "vnjson-tgtq"}*/
             ],
             [
               
               {"text": "vnjson-cli", "url": "https://github.com/vnjson/vnjson-cli"},
               {"text": "Консольная программа nodejs"},
-              {"text": "v0.4.7"},
+              {"text": "v0.4.7"}
              /* {"text": "Создание текстовых квестов для телеграмма"}*/
             ],
             [
               {"text": "vnjson-sdk", "url": "https://github.com/vnjson/vnjson-sdk"},
               {"text": "GUI обертка вокруг CLI версии"},
              
-              {"text": "v0.5.2"},
+              {"text": "v0.5.2"}
              /* {"text": "v0.3.2"}*/
             ]
-        ],
+        ]
 
-    };
+    }
 
 var app = {
       getCommits: function(){
