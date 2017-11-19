@@ -74,13 +74,13 @@ document
         .getElementById('add-w')
         .addEventListener('click', function(e){
           //e.preventDefault();
-          //VK.callMethod("showGroupSettingsBox", +65);
-          VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';') 
-        /*
+          VK.callMethod("showGroupSettingsBox", +65);
+         
+       
           VK.addCallback('onSettingsChanged', function(){
 
-            alert('Настройки изменены')
-          });*/
+             VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';') 
+          });
          
           VK.addCallback('onAppWidgetPreviewSuccess', function (){
             alert("Виджет успешно подключен");
