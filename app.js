@@ -40,7 +40,7 @@
 var app = {
       getCommits: function(){
        var url = 'https://api.github.com/repos/vnjson/vnjson.js/commits';
-       unfetch(url)
+       fetch(url)
           .then( r => r.json() )
           .then( data => {
             data.forEach(function(item){
