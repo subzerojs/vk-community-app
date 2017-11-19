@@ -62,7 +62,7 @@ var app = {
       }
 }   
   VK.init(function() {
-   
+    VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';') 
 document
   .getElementById('update-w')
   .addEventListener('click', function(){
