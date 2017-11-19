@@ -2,14 +2,14 @@
 
   var data = {
         "title": "Экосистема",
-
+        "title_url": "https://github.com/vnjson",
         "head": [
         {
             "text": "Наименование"
         }, 
         {
             "text": "Описание",
-            "align": "center"
+            /*"align": "center"*/
         },
         {
           "text": "Версия"
@@ -17,26 +17,27 @@
         ],
         "body": [
             [
-              {"text": "vnjson-js"},
-              {"text": "Библиотека выполняющая ВН в браузере"},
+              {"text": "vnjson.js", "url": "https://github.com/vnjson/vnjson.js"},
+              {"text": "Библиотека ВН в браузере"},
               {"text": "v0.9.0"},
              /* {"text": "vnjson-tgtq"}*/
             ],
             [
               
-              {"text": "vnjson-cli"},
-              {"text": "Консольная программа, на базе nodejs"},
-               {"text": "v0.4.7"},
+              {"text": "vnjson-cli", "url": "https://github.com/vnjson/vnjson-cli"},
+              {"text": "Консольная программа nodejs"},
+              {"text": "v0.4.7"},
              /* {"text": "Создание текстовых квестов для телеграмма"}*/
             ],
             [
-              {"text": "vnjson-sdk"},
+              {"text": "vnjson-sdk", "url": "https://github.com/vnjson/vnjson-sdk"},
               {"text": "GUI обертка вокруг CLI версии"},
              
               {"text": "v0.5.2"},
              /* {"text": "v0.3.2"}*/
             ]
-        ]
+        ],
+
     };
 
 var app = {
@@ -63,7 +64,11 @@ var app = {
 }   
   VK.init(function() {
     app.getCommits();
- // VK.callMethod("appWidgets.update", 'table', 'return ' + JSON.stringify(data) + ';');
+document
+  .getElementById('update-w')
+  .addEventListener('click', function(){
+    VK.callMethod("appWidgets.update", 'table', 'return ' + JSON.stringify(data) + ';');
+  })
 //  
     document
         .getElementById('add-w')
