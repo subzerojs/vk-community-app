@@ -60,13 +60,13 @@ var app = {
       }
 }   
   VK.init(function() {
-    
+    app.getCommits();
  // VK.callMethod("appWidgets.update", 'table', 'return ' + JSON.stringify(data) + ';');
-//
+//  
     document
         .getElementById('add-w')
         .addEventListener('click', function(e){
-          e.preventDefault();
+          //e.preventDefault();
           VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';');
           VK.addCallback('onAppWidgetPreviewSuccess', function (){
             alert("Виджет успешно подключен");
