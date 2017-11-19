@@ -2,7 +2,6 @@
 
   var data = {
         "title": "Экосистема",
-        "title_url": "https://github.com/vnjson",
         "head": [
         {
             "text": "Наименование"
@@ -74,7 +73,7 @@ document
     document
         .getElementById('add-w')
         .addEventListener('click', function(e){
-          //e.preventDefault();
+          e.preventDefault();
           //VK.callMethod("showGroupSettingsBox", +65);
           VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';');
         
