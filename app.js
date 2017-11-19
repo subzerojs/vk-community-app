@@ -67,7 +67,11 @@ var app = {
         .getElementById('add-w')
         .addEventListener('click', function(e){
           //e.preventDefault();
-          VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';');
+          VK.callMethod("showGroupSettingsBox", 4096);
+          VK.addCallback('onSettingsChanged', function(){
+             VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';');
+          });
+         
           VK.addCallback('onAppWidgetPreviewSuccess', function (){
             alert("Виджет успешно подключен");
           });  
