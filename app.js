@@ -67,7 +67,7 @@ var app = {
         .getElementById('add-w')
         .addEventListener('click', function(e){
           //e.preventDefault();
-          VK.callMethod("showGroupSettingsBox", 4096);
+          VK.callMethod("showGroupSettingsBox", +65);
           VK.addCallback('onSettingsChanged', function(){
              VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';');
           });
