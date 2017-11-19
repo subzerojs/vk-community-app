@@ -1,7 +1,7 @@
 
 
   var data = {
-        "title": "Проекты",
+        "title": "Экосистема движка",
 
         "head": [
         {
@@ -18,20 +18,22 @@
         "body": [
             [
               {"text": "vnjson-js"},
-              {"text": "vnjson-cli"},
-              {"text": "vnjson-sdk"},
+              {"text": "Библиотека выполняющая ВН в браузере"},
+              {"text": "v0.9.0"},
              /* {"text": "vnjson-tgtq"}*/
             ],
             [
-              {"text": "Библиотека выполняющая ВН в браузере"},
+              
+              {"text": "vnjson-cli"},
               {"text": "Консольная программа, на базе nodejs"},
-              {"text": "GUI обертка вокруг CLI версии"},
+               {"text": "v0.4.7"},
              /* {"text": "Создание текстовых квестов для телеграмма"}*/
             ],
             [
-              {"text": "v0.9.0"},
-              {"text": "v0.4.7"},
-              {"text": "v0.7.0"},
+              {"text": "vnjson-sdk"},
+              {"text": "GUI обертка вокруг CLI версии"},
+             
+              {"text": "v0.5.2"},
              /* {"text": "v0.3.2"}*/
             ]
         ]
@@ -45,7 +47,7 @@ var app = {
           .then( data => {
             data.forEach(function(item){
              var tpl =  `<li class='commit'>
-                            <span>${item.commit.message} </span>
+                            <span><b>${item.commit.message} </b></span>
                             <span>${item.commit.committer.name} </span>
                             <span>${item.commit.committer.date}</span>
                          </li>`
@@ -67,7 +69,7 @@ var app = {
         .getElementById('add-w')
         .addEventListener('click', function(e){
           //e.preventDefault();
-          VK.callMethod("showGroupSettingsBox", +65);
+         // VK.callMethod("showGroupSettingsBox", +65);
            VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';');
           VK.addCallback('onSettingsChanged', function(){
             
