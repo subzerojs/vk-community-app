@@ -8,7 +8,7 @@
         }, 
         {
             "text": "Описание",
-            /*"align": "center"*/
+            "align": "left"
         },
         {
           "text": "Версия"
