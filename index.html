@@ -3,71 +3,27 @@
   <meta charset="utf-8">
   <title>vk-test-app</title>
   <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+  <script src="/deps/unfetch.js" type="text/javascript"></script>
+  <script src="/app.js" type="text/javascript"></script>
 </head>
 
 <body>
-
-  <section>
-  тест
-  </section>
+<h3>vnjson.js github commits</h3>
+  <ul id="commitsTable">
+    
+  </ul>
   <button id="add-w">Подключить виджет</button>
 
-<script type="text/javascript">
-  
-  var data = {
-        "title": "Проекты",
 
-        "head": [
-        {
-            "text": "Наименование"
-        }, 
-        {
-            "text": "Описание",
-            "align": "center"
-        },
-        {
-          "text": "Версия"
-        }
-        ],
-        "body": [
-            [
-              {"text": "vnjson-js"},
-              {"text": "vnjson-cli"},
-              {"text": "vnjson-sdk"},
-              {"text": "vnjson-tgtq"}
-            ],
-            [
-              {"text": "Библиотека выполняющая ВН в браузере"},
-              {"text": "Консольная программа, на базе nodejs"},
-              {"text": "GUI обертка вокруг CLI версии"},
-              {"text": "Создание текстовых квестов для телеграмма"}
-            ],
-            [
-              {"text": "v0.8.5"},
-              {"text": "v0.4.7"},
-              {"text": "v0.7.0"},
-              {"text": "v0.3.2"}
-            ]
-        ]
-    };
-  VK.init(function() {
-    
-  VK.callMethod("appWidgets.update", 'table', 'return ' + JSON.stringify(data) + ';');
-//VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';') 
-    
-  }, function() {
-     // API initialization failed
-     // Can reload page here
-}, '5.69');
-</script>
-<script type="text/javascript">/*
+<script type="text/javascript">
+
+
+/*
 VK.addCallback('onSettingsChanged', function(){
 
 });
 /*
-VK.addCallback('onAppWidgetPreviewSuccess', function (){
-            alert("Виджет установлен");
-        });  
+
   */
 </script>  
   
