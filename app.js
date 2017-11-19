@@ -62,7 +62,7 @@ var app = {
       }
 }   
   VK.init(function() {
-    VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';') 
+    
 document
   .getElementById('update-w')
   .addEventListener('click', function(){
@@ -74,7 +74,7 @@ document
         .getElementById('add-w')
         .addEventListener('click', function(e){
           //e.preventDefault();
-         // VK.callMethod("showGroupSettingsBox", +65);
+          VK.callMethod("showGroupSettingsBox", +65);
          
         VK.callMethod("showAppWidgetPreviewBox", 'table', 'return ' + JSON.stringify(data) + ';') 
           VK.addCallback('onSettingsChanged', function(){
