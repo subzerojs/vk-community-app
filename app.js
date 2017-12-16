@@ -1,66 +1,29 @@
 
 
   var data = {
-        "title": "Экосистема",
-        "title_url": "https://github.com/vnjson",
+        "title": "Я в",
+       
         "head": [
         {
-            "text": "Наименование"
-        }, 
-        {
-            "text": "Описание",
-            "align": "left"
-        },
-        {
-          "text": "Версия"
+            "text": "url"
         }
         ],
         "body": [
             [
-              {"text": "vnjson.js"},
-              {"text": "Библиотека ВН в браузере"},
-              {"text": "v0.9.0"}
-             /* {"text": "vnjson-tgtq"}*/
+              {"text": "https://github.com/vnjson"}
             ],
             [
-              
-              {"text": "vnjson-cli"},
-              {"text": "Консольная программа nodejs"},
-              {"text": "v0.4.7"}
-             /* {"text": "Создание текстовых квестов для телеграмма"}*/
+              {"text": "https://pinterest.com/bakakasin"}
             ],
             [
-              {"text": "vnjson-sdk"},
-              {"text": "GUI обертка вокруг CLI версии"},
-             
-              {"text": "v0.5.2"}
-             /* {"text": "v0.3.2"}*/
+              {"text": "https://twitter.com/bakakasin"}
             ]
         ]
 
     }
 
 var app = {
-      getCommits: function(){
-       var url = 'https://api.github.com/repos/vnjson/vnjson.js/commits';
-       fetch(url)
-          .then( r => r.json() )
-          .then( data => {
-            data.forEach(function(item){
-             var tpl =  `<li class='commit'>
-                            <span><b>${item.commit.message} </b></span>
-                            <span>${item.commit.committer.name} </span>
-                            <span>${item.commit.committer.date}</span>
-                         </li>`
-              
-              document
-                .getElementById('commitsTable')
-                .innerHTML += tpl;
-  
-            })
-            
-          });
-      }
+
 }   
   VK.init(function() {
     
@@ -87,7 +50,7 @@ document
             alert("Виджет успешно подключен");
           });  
         })
-   app.getCommits();      
+   
   }, function() {
      // API initialization failed
      alert('[ initialization faled ]')
