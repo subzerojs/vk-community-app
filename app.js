@@ -1,7 +1,7 @@
 
 
   var data = {
-        "title": "Я в",
+        "title": "Комьюнити",
        
         "head": [
         {
